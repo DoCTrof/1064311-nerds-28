@@ -21,6 +21,7 @@
                         <li><a href="catalog.html">Магазин</a></li>
                         <li><a href="">Контакты</a></li>
                     </ul>
+                    <img src="img/cart-icon.svg" width="15" height="15" alt="Корзина">
                     <a href="">Корзина</a>
                 </nav>
             </div>
@@ -30,7 +31,7 @@
         <main>
             <div class="container">
                 <section aria-label="sort">
-                    <h2>Сортировка товаров</h2>
+                    <h2 class="visually-hidden">Сортировка товаров</h2>
                     <span>Стоимость:</span>
                     <span>Сортировать:</span>
                     <span>По цене</span>
@@ -40,17 +41,61 @@
             </div>
             <div class="container">
                 <section aria-label="filter">
-                    <h2>Фильтр товаров</h2>
-                    <!-- Здесь будет форма фильтра по параметрам -->
+                    <h2 class="visually-hidden">Фильтр товаров</h2>
+                    <form action="https://echo.htmlacademy.ru" method="get">
+                        <fieldset>
+                            <legend>Сетка:</legend>
+                            <ul>
+                                <li>
+                                    <input type="radio" name="grid-group" value="adaptive" id="filter-adaptive" checked>
+                                    <label for="filter-adaptive">Адаптивная</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="grid-group" value="fixed" id="filter-fixed">
+                                    <label for="filter-fixed">Фиксированная</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="grid-group" value="rubber" id="filter-rubber">
+                                    <label for="filter-rubber">Резиновая</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Особенности:</legend>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" name="slider" id="filter-slider" checked>
+                                    <label for="filter-slider">Слайдер</label>
+                                 </li>
+                                <li>
+                                    <input type="checkbox" name="advantages" id="filter-advantages">
+                                    <label for="filter-advantages">Блок преимуществ</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="news" id="filter-news" checked>
+                                    <label for="filter-news">Новости</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="gallery" id="filter-gallery">
+                                    <label for="filter-gallery">Галерея</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="cart" id="filter-cart">
+                                    <label for="filter-cart">Корзина</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <button type="submit">Показать</button>
+                    </form>
                 </section>
             </div>
             <div class="container">
                 <section aria-label="product">
-                    <h2>Список товаров</h2>
+                    <h2 class="visually-hidden">Список товаров</h2>
                     <ul>
                         <li>
                             <a>
-                                <h3>Sedona</h3>
+                                <h3 class="visually-hidden">Sedona</h3>
                                 <div>
                                     <img src="img/img-sedona.jpg" width="360" height="580" alt="Информационный сайт для туристов «Sedona»">
                                 </div>
@@ -66,7 +111,7 @@
                         </li>
                         <li>
                             <a>
-                                <h3>Borodinski</h3>
+                                <h3 class="visually-hidden">Borodinski</h3>
                                 <div>
                                     <img src="img/img-barbershop.jpg" width="360" height="580" alt="Сайт барбершопа «Бородинский»">
                                 </div>
@@ -74,7 +119,7 @@
                         </li>
                         <li>
                             <a>
-                                <h3>Mishka</h3>
+                                <h3 class="visually-hidden">Mishka</h3>
                                 <div>
                                     <img src="img/img-mishka.jpg" width="360" height="580" alt="Интернет-магазин «Mishka»">
                                 </div>
@@ -82,7 +127,7 @@
                         </li>
                         <li>
                             <a>
-                                <h3>А+</h3>
+                                <h3 class="visually-hidden">А+</h3>
                                 <div>
                                     <img src="img/img-aplus.jpg" width="360" height="580" alt="Сайт дистанционного обучения «А+»">
                                 </div>
@@ -90,7 +135,7 @@
                         </li>
                         <li>
                             <a>
-                                <h3>Кваст</h3>
+                                <h3 class="visually-hidden">Кваст</h3>
                                 <div>
                                     <img src="img/img-kvast.jpg" width="360" height="580" alt="Сайт производителя крафтового кваса «Кваст»">
                                 </div>
@@ -122,7 +167,7 @@
         <footer>
             <div class="container">
                 <section aria-label="map">
-                    <h2>Карта</h2>
+                    <h2 class="visually-hidden">Карта</h2>
                     <img src="img/map.png" width="1440" height="416" alt="Карта с адресом">
                     <img src="img/map-marker.png" width="231" height="190" alt="Маркер «Nёrds»">
                     <div class="address">
@@ -140,12 +185,15 @@
                     <ul>
                         <li>
                             <a href="">ВКонтакте</a>
+                            <img src="img/vk-icon.svg" width="26" height="15" alt="ВКонтакте" style="background-color: #E1E1E1;">
                         </li>
                         <li>
                             <a href="">Фейсбук</a>
+                            <img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук" style="background-color: #E1E1E1;">
                         </li>
                         <li>
                             <a href="">Инстаграм</a>
+                            <img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм" style="background-color: #E1E1E1;">
                         </li>
                     </ul>
                     <div class="container"> 
@@ -156,12 +204,26 @@
             </div>
         </footer>
 
-<!-- Модальное окно -->
-<!--    <section aria-label="modal-window">
-        <h2>Напишите нам</h2>
-        Здесь будет форма обратной связи 
-        <button type="button">Закрыть</button>
-    </section>-->
+    <div>
+        <section class="visually-hidden" aria-label="modal-window">
+            <h2>Напишите нам</h2>
+            <button type="button">Закрыть</button>
+            <form action="https://echo.htmlacademy.ru" method="post">
+                <p>
+                    <label for="feedback-name">Ваше имя:</label>
+                    <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
+                </p>
+                <p>
+                    <label for="feedback-email">Ваш email:</label>
+                    <input id="feedback-email" type="text" name="email" placeholder="email@example.com">
+                </p>
+                <p>
+                    <label for="feedback-message">Текст письма:</label>
+                    <input id="feedback-message" type="text" name="message" placeholder="В свободной форме">
+                </p>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
     </div>
 </body>
 </html>

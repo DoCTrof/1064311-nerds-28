@@ -30,16 +30,16 @@
 
         <main>
             <div class="container">
+                <aside aria-label="sort&filter">
                 <section aria-label="sort">
                     <h2 class="visually-hidden">Сортировка товаров</h2>
-                    <span>Стоимость:</span>
-                    <span>Сортировать:</span>
-                    <span>По цене</span>
-                    <span>По типу</span>
-                    <span>По названию</span>
-                </section>
-            </div>
-            <div class="container">
+                    <form method="post" oninput="costoutput.value=cost.value">
+                        <label for="sort">Стоимость:</label>
+                            <input type="range" id="cost" name="cost" min="0" max="20000" step="1000">
+                        От<input type="text" name="min-price" value="0">
+                        До<output name="costoutput">15000</output>
+                    </form>
+                </section>            
                 <section aria-label="filter">
                     <h2 class="visually-hidden">Фильтр товаров</h2>
                     <form action="https://echo.htmlacademy.ru" method="get">
@@ -88,10 +88,21 @@
                         <button type="submit">Показать</button>
                     </form>
                 </section>
+            </aside>
             </div>
             <div class="container">
                 <section aria-label="product">
                     <h2 class="visually-hidden">Список товаров</h2>
+                    <div>
+                        <span>Сортировать:</span>
+                        <ul>
+                            <li><a href="">По цене</a></li>
+                            <li><a href="">По типу</a></li>
+                            <li><a href="">По названию</a></li>
+                            <li><a href=""><img src="img/icon-down-dir.svg" width="10" height="10" alt="По убыванию"></a></li>
+                            <li><a href=""><img src="img/icon-up-dir.svg" width="10" height="10" alt="По возрастанию"></a></li>
+                        </ul>
+                    </div>
                     <ul>
                         <li>
                             <a>

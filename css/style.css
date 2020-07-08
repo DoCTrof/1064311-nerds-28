@@ -1,4 +1,5 @@
 /* Variables */
+
 :root {
  	--basic-black: #000000;
  	--basic-grey: #EEEEEE;
@@ -8,6 +9,8 @@
  	--basic-yellow: #EFC849;
   	--basic-white: #FFFFFF;
 }
+
+/* Variables */
 
 /* Global */
 
@@ -84,7 +87,10 @@ input[type="radio"].visually-hidden {
           box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 }
 
+/* Global */
+
 /* Header */
+
 .main-header {
   background-color: var(--basic-grey);
 }
